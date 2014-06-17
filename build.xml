@@ -72,13 +72,13 @@
   	<copy file="${dist.build.dir}/${prop.dir}/ariadneV4.template" tofile="${dist.build.dir}/${prop.dir}/ariadneV4.properties"/>
 
     <tstamp>
-      <format property="TODAY_ES" pattern="yyyy-mm-dd" locale="es,ES"/>
+      <format property="current_date" pattern="yyyy-mm-dd" locale="es,ES"/>
   </tstamp>
 
     <replace file="${dist.build.dir}/${prop.dir}/ariadneV4.properties">
       <replacefilter 
         token="agrega_educacion_es.latestHarvestedDatestamp = 2009-01-01"
-        value="agrega_educacion_es.latestHarvestedDatestamp = TESTING"
+        value="agrega_educacion_es.latestHarvestedDatestamp = ${current_date}"
       />
     </replace>
 
