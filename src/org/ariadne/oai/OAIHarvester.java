@@ -461,7 +461,7 @@ public class OAIHarvester {
 						} else{
 							harvestlogger.info("Stopping on no more items....CompleteSize:"
 	              + (resumptionRecords!=null ? resumptionRecords.getCompleteSize() : "") + "-CurrentIndex:"
-	              + (resumptionRecords!=null ? resumptionRecords.getCurrentIndex() : "");
+	              + (resumptionRecords!=null ? resumptionRecords.getCurrentIndex() : ""));
 							stop = true;
 						}
 					}
