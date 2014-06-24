@@ -33,8 +33,8 @@ Harvest.afterHarvestJob.outputDir = /opt/LOM-ES_metadata/
 #Cronjob properties
 cron.enabled = true
 cron.schedule.seconds = 0
-cron.schedule.minutes = 28
-cron.schedule.hours = 6
+cron.schedule.minutes = 5 
+cron.schedule.hours = 0
 cron.schedule.day_month = *
 cron.schedule.month = *
 cron.schedule.day_week = ?
