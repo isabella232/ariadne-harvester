@@ -276,6 +276,9 @@ public class TestOaiTarget extends Test {
 		if (hasError())
 			return;
 		harvestlogger.info("Testing baseUrl " + reposProps.getBaseURL() + ".");
+		harvestlogger.info("SET: " + reposProps.getHarvestingSet());
+        	harvestlogger.info("FROM: " + reposProps.getLatestHarvestedDatestamp());
+		harvestlogger.info("UNTIL: " + reposProps.getHarvestInterval());
 		try {
 			repository = new OAIRepository();
 			repository.setBaseURL(reposProps.getBaseURL());
