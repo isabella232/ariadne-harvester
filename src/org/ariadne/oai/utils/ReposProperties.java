@@ -4,235 +4,235 @@ import java.util.HashMap;
 
 public class ReposProperties {
 
-	public static String repositoryName = "repositoryName";
-	public static String repositoryIdentifier = "repositoryIdentifier";
-	public static String providerName = "providerName";
-	public static String latestHarvestedDatestamp = "latestHarvestedDatestamp";
-  public static String harvestInterval = "harvestInterval";
-	public static String active = "active";
-	public static String metadataPrefix = "metadataPrefix";
-	public static String metadataFormat = "metadataFormat";
-	public static String harvestingSet = "harvestingSet";
-	public static String granularity = "granularity";
-	public static String autoReset = "autoReset";
-	public static String validationUri = "validationUri";
-	public static String statusLastHarvest = "statusLastHarvest";
-	public static String baseURL = "baseURL";
-	public static String transformationID = "transformationID";
-	public static String registryIdentifierCatalog = "registryIdentifier.catalog";
-	public static String registryIdentifierEntry = "registryIdentifier.entry";
-	public static String skipPreOaiTest = "skipPreOaiTest";
-	public static String harvestByGetRecord = "harvestByGetRecord";
+    public static String repositoryName = "repositoryName";
+    public static String repositoryIdentifier = "repositoryIdentifier";
+    public static String providerName = "providerName";
+    public static String latestHarvestedDatestamp = "latestHarvestedDatestamp";
+    public static String harvestInterval = "harvestInterval";
+    public static String active = "active";
+    public static String metadataPrefix = "metadataPrefix";
+    public static String metadataFormat = "metadataFormat";
+    public static String harvestingSet = "harvestingSet";
+    public static String granularity = "granularity";
+    public static String autoReset = "autoReset";
+    public static String validationUri = "validationUri";
+    public static String statusLastHarvest = "statusLastHarvest";
+    public static String baseURL = "baseURL";
+    public static String transformationID = "transformationID";
+    public static String registryIdentifierCatalog = "registryIdentifier.catalog";
+    public static String registryIdentifierEntry = "registryIdentifier.entry";
+    public static String skipPreOaiTest = "skipPreOaiTest";
+    public static String harvestByGetRecord = "harvestByGetRecord";
 
-	protected String repositoryIdentifierInteral;
-//	protected String repositoryIdentifier;
-	
-	protected HashMap<String, String> properties = new HashMap<String, String>();
-	
-	protected final static HashMap<String, String> defaultProperties = new HashMap<String, String>();
+    protected String repositoryIdentifierInteral;
+    // protected String repositoryIdentifier;
 
-	static {
-		defaultProperties.put(providerName, "");
-		defaultProperties.put(repositoryName, "");
-		defaultProperties.put(repositoryIdentifier, "");
-		defaultProperties.put(latestHarvestedDatestamp, "1000-01-01T00:00:00Z");
-		defaultProperties.put(harvestInterval, "-1");
-		defaultProperties.put(active, "Yes");
-		defaultProperties.put(metadataPrefix, "oai_lom");
-		defaultProperties.put(metadataFormat, "LOM");
-		defaultProperties.put(harvestingSet, "");
-		defaultProperties.put(granularity, "YYYY-MM-DDThh:mm:ssZ");
-		defaultProperties.put(autoReset, "true");
-		defaultProperties.put(validationUri, "");
-		defaultProperties.put(statusLastHarvest, "-1");
-		defaultProperties.put(transformationID, "");
-		defaultProperties.put(registryIdentifierCatalog, "");
-		defaultProperties.put(registryIdentifierEntry, "");
-		defaultProperties.put(skipPreOaiTest, "false");
-		defaultProperties.put(harvestByGetRecord, "false");
-	}
+    protected HashMap<String, String> properties = new HashMap<String, String>();
 
-	public String getProviderName() {
-		return properties.get(providerName);
-	}
+    protected final static HashMap<String, String> defaultProperties = new HashMap<String, String>();
 
-	public void setProviderName(String providerName) {
-		properties.put(ReposProperties.providerName, providerName);
-	}
+    static {
+        defaultProperties.put(providerName, "");
+        defaultProperties.put(repositoryName, "");
+        defaultProperties.put(repositoryIdentifier, "");
+        defaultProperties.put(latestHarvestedDatestamp, "1000-01-01T00:00:00Z");
+        defaultProperties.put(harvestInterval, "-1");
+        defaultProperties.put(active, "Yes");
+        defaultProperties.put(metadataPrefix, "oai_lom");
+        defaultProperties.put(metadataFormat, "LOM");
+        defaultProperties.put(harvestingSet, "MetadatosFederados");
+        defaultProperties.put(granularity, "YYYY-MM-DDThh:mm:ssZ");
+        defaultProperties.put(autoReset, "true");
+        defaultProperties.put(validationUri, "");
+        defaultProperties.put(statusLastHarvest, "-1");
+        defaultProperties.put(transformationID, "");
+        defaultProperties.put(registryIdentifierCatalog, "");
+        defaultProperties.put(registryIdentifierEntry, "");
+        defaultProperties.put(skipPreOaiTest, "false");
+        defaultProperties.put(harvestByGetRecord, "false");
+    }
 
-	public String getLatestHarvestedDatestamp() {
-		return properties.get(latestHarvestedDatestamp);
-	}
+    public String getProviderName() {
+        return properties.get(providerName);
+    }
 
-	public void setLatestHarvestedDatestamp(String latestHarvestedDatestamp) {
-		properties.put(ReposProperties.latestHarvestedDatestamp, latestHarvestedDatestamp);
-	}
+    public void setProviderName(String providerName) {
+        properties.put(ReposProperties.providerName, providerName);
+    }
 
-	public String getHarvestInterval() {
-		return properties.get(harvestInterval);
-	}
+    public String getLatestHarvestedDatestamp() {
+        return properties.get(latestHarvestedDatestamp);
+    }
 
-	public void setHarvestInterval(String harvestInterval) {
-		properties.put(ReposProperties.harvestInterval, harvestInterval);
-	}
+    public void setLatestHarvestedDatestamp(String latestHarvestedDatestamp) {
+        properties.put(ReposProperties.latestHarvestedDatestamp, latestHarvestedDatestamp);
+    }
 
-	public String getActive() {
-		return properties.get(active);
-	}
+    public String getHarvestInterval() {
+        return properties.get(harvestInterval);
+    }
 
-	public void setActive(String active) {
-		properties.put(ReposProperties.active, active);
-	}
+    public void setHarvestInterval(String harvestInterval) {
+        properties.put(ReposProperties.harvestInterval, harvestInterval);
+    }
 
-	public String getMetadataPrefix() {
-		return properties.get(metadataPrefix);
-	}
+    public String getActive() {
+        return properties.get(active);
+    }
 
-	public void setMetadataPrefix(String metadataPrefix) {
-		properties.put(ReposProperties.metadataPrefix, metadataPrefix);
-	}
+    public void setActive(String active) {
+        properties.put(ReposProperties.active, active);
+    }
 
-	public String getMetadataFormat() {
-		return properties.get(metadataFormat);
-	}
+    public String getMetadataPrefix() {
+        return properties.get(metadataPrefix);
+    }
 
-	public void setMetadataFormat(String metadataFormat) {
-		properties.put(ReposProperties.metadataFormat, metadataFormat);
-	}
+    public void setMetadataPrefix(String metadataPrefix) {
+        properties.put(ReposProperties.metadataPrefix, metadataPrefix);
+    }
 
-	public String getHarvestingSet() {
-		return properties.get(harvestingSet);
-	}
+    public String getMetadataFormat() {
+        return properties.get(metadataFormat);
+    }
 
-	public void setHarvestingSet(String harvestingSet) {
-		properties.put(ReposProperties.harvestingSet, harvestingSet);
-	}
+    public void setMetadataFormat(String metadataFormat) {
+        properties.put(ReposProperties.metadataFormat, metadataFormat);
+    }
 
-	public String getGranularity() {
-		return properties.get(granularity);
-	}
+    public String getHarvestingSet() {
+        return properties.get(harvestingSet);
+    }
 
-	public void setGranularity(String granularity) {
-		properties.put(ReposProperties.granularity, granularity);
-	}
+    public void setHarvestingSet(String harvestingSet) {
+        properties.put(ReposProperties.harvestingSet, harvestingSet);
+    }
 
-	public boolean getAutoReset() {
-		return Boolean.valueOf(properties.get(autoReset)).booleanValue();
-	}
+    public String getGranularity() {
+        return properties.get(granularity);
+    }
 
-	public void setAutoReset(boolean autoReset) {
-		properties.put(ReposProperties.autoReset, String.valueOf(autoReset));
-	}
-	
-	public void setAutoReset(String autoReset) {
-		properties.put(ReposProperties.autoReset, autoReset);
-	}
+    public void setGranularity(String granularity) {
+        properties.put(ReposProperties.granularity, granularity);
+    }
 
-	public String getValidationUri() {
-		return properties.get(validationUri);
-	}
+    public boolean getAutoReset() {
+        return Boolean.valueOf(properties.get(autoReset)).booleanValue();
+    }
 
-	public void setValidationUri(String validationUri) {
-		properties.put(ReposProperties.validationUri, validationUri);
-	}
+    public void setAutoReset(boolean autoReset) {
+        properties.put(ReposProperties.autoReset, String.valueOf(autoReset));
+    }
 
-	public String getStatusLastHarvest() {
-		return properties.get(statusLastHarvest);
-	}
+    public void setAutoReset(String autoReset) {
+        properties.put(ReposProperties.autoReset, autoReset);
+    }
 
-	public void setStatusLastHarvest(String statusLastHarvest) {
-		properties.put(ReposProperties.statusLastHarvest, statusLastHarvest);
-	}
+    public String getValidationUri() {
+        return properties.get(validationUri);
+    }
 
-	public String getBaseURL() {
-		return properties.get(baseURL);
-	}
+    public void setValidationUri(String validationUri) {
+        properties.put(ReposProperties.validationUri, validationUri);
+    }
 
-	public void setBaseURL(String baseURL) {
-		properties.put(ReposProperties.baseURL, baseURL);
-	}
+    public String getStatusLastHarvest() {
+        return properties.get(statusLastHarvest);
+    }
 
-	public static HashMap<String, String> getDefaultProperties() {
-		return defaultProperties;
-	}
+    public void setStatusLastHarvest(String statusLastHarvest) {
+        properties.put(ReposProperties.statusLastHarvest, statusLastHarvest);
+    }
 
-	public HashMap<String, String> getProperties() {
-		return properties;
-	}
+    public String getBaseURL() {
+        return properties.get(baseURL);
+    }
 
-	public void setProperties(HashMap<String, String> properties) {
-		this.properties = properties;
-	}
+    public void setBaseURL(String baseURL) {
+        properties.put(ReposProperties.baseURL, baseURL);
+    }
 
-	public String getRepositoryIdentifierInteral() {
-		return repositoryIdentifierInteral;
-	}
+    public static HashMap<String, String> getDefaultProperties() {
+        return defaultProperties;
+    }
 
-	public void setRepositoryIdentifierInteral(String repositoryIdentifierInteral) {
-		this.repositoryIdentifierInteral = repositoryIdentifierInteral;
-	}
+    public HashMap<String, String> getProperties() {
+        return properties;
+    }
 
-	public String getRepositoryName() {
-		return properties.get(repositoryName);
-	}
+    public void setProperties(HashMap<String, String> properties) {
+        this.properties = properties;
+    }
 
-	public void setRepositoryName(String repositoryName) {
-		properties.put(ReposProperties.repositoryName, repositoryName);
-	}
+    public String getRepositoryIdentifierInteral() {
+        return repositoryIdentifierInteral;
+    }
 
-	public String getRepositoryIdentifier() {
-		return properties.get(repositoryIdentifier);
-	}
+    public void setRepositoryIdentifierInteral(String repositoryIdentifierInteral) {
+        this.repositoryIdentifierInteral = repositoryIdentifierInteral;
+    }
 
-	public void setRepositoryIdentifier(String repositoryIdentifier) {
-		properties.put(ReposProperties.repositoryIdentifier, repositoryIdentifier);
-	} 
+    public String getRepositoryName() {
+        return properties.get(repositoryName);
+    }
 
-	public String getTransformationID() {
-		return properties.get(transformationID);
-	}
+    public void setRepositoryName(String repositoryName) {
+        properties.put(ReposProperties.repositoryName, repositoryName);
+    }
 
-	public void setTransformationID(String transformationID) {
-		properties.put(ReposProperties.transformationID, transformationID);
-	}
+    public String getRepositoryIdentifier() {
+        return properties.get(repositoryIdentifier);
+    }
 
-	public String getRegistryIdentifierCatalog() {
-		return properties.get(registryIdentifierCatalog);
-	}
+    public void setRepositoryIdentifier(String repositoryIdentifier) {
+        properties.put(ReposProperties.repositoryIdentifier, repositoryIdentifier);
+    }
 
-	public void setRegistryIdentifierCatalog(String registryIdentifierCatalog) {
-		properties.put(ReposProperties.registryIdentifierCatalog,registryIdentifierCatalog);
-	}
+    public String getTransformationID() {
+        return properties.get(transformationID);
+    }
 
-	public String getRegistryIdentifierEntry() {
-		return properties.get(registryIdentifierEntry);
-	}
+    public void setTransformationID(String transformationID) {
+        properties.put(ReposProperties.transformationID, transformationID);
+    }
 
-	public void setRegistryIdentifierEntry(String registryIdentifierEntry) {
-		properties.put(ReposProperties.registryIdentifierEntry, registryIdentifierEntry);
-	}
-	
-	public boolean getSkipPreOaiTest() {
-		return Boolean.valueOf(properties.get(skipPreOaiTest)).booleanValue();
-	}
+    public String getRegistryIdentifierCatalog() {
+        return properties.get(registryIdentifierCatalog);
+    }
 
-	public void setSkipPreOaiTest(boolean skipPreOaiTest) {
-		properties.put(ReposProperties.skipPreOaiTest, String.valueOf(skipPreOaiTest));
-	}
-	
-	public void setSkipPreOaiTest(String skipPreOaiTest) {
-		properties.put(ReposProperties.skipPreOaiTest, skipPreOaiTest);
-	}
-	
-	public boolean getHarvestByGetRecord() {
-		return Boolean.valueOf(properties.get(harvestByGetRecord)).booleanValue();
-	}
+    public void setRegistryIdentifierCatalog(String registryIdentifierCatalog) {
+        properties.put(ReposProperties.registryIdentifierCatalog, registryIdentifierCatalog);
+    }
 
-	public void setHarvestByGetRecord(boolean harvestByGetRecord) {
-		properties.put(ReposProperties.harvestByGetRecord, String.valueOf(harvestByGetRecord));
-	}
-	
-	public void setHarvestByGetRecord(String harvestByGetRecord) {
-		properties.put(ReposProperties.harvestByGetRecord, harvestByGetRecord);
-	}
+    public String getRegistryIdentifierEntry() {
+        return properties.get(registryIdentifierEntry);
+    }
+
+    public void setRegistryIdentifierEntry(String registryIdentifierEntry) {
+        properties.put(ReposProperties.registryIdentifierEntry, registryIdentifierEntry);
+    }
+
+    public boolean getSkipPreOaiTest() {
+        return Boolean.valueOf(properties.get(skipPreOaiTest)).booleanValue();
+    }
+
+    public void setSkipPreOaiTest(boolean skipPreOaiTest) {
+        properties.put(ReposProperties.skipPreOaiTest, String.valueOf(skipPreOaiTest));
+    }
+
+    public void setSkipPreOaiTest(String skipPreOaiTest) {
+        properties.put(ReposProperties.skipPreOaiTest, skipPreOaiTest);
+    }
+
+    public boolean getHarvestByGetRecord() {
+        return Boolean.valueOf(properties.get(harvestByGetRecord)).booleanValue();
+    }
+
+    public void setHarvestByGetRecord(boolean harvestByGetRecord) {
+        properties.put(ReposProperties.harvestByGetRecord, String.valueOf(harvestByGetRecord));
+    }
+
+    public void setHarvestByGetRecord(String harvestByGetRecord) {
+        properties.put(ReposProperties.harvestByGetRecord, harvestByGetRecord);
+    }
 }
