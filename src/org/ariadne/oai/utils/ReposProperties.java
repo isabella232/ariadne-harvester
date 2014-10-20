@@ -40,7 +40,7 @@ public class ReposProperties {
         defaultProperties.put(active, "Yes");
         defaultProperties.put(metadataPrefix, "oai_lom");
         defaultProperties.put(metadataFormat, "LOM");
-        defaultProperties.put(harvestingSet, "MetadatosFederados");
+        defaultProperties.put(harvestingSet, "");
         defaultProperties.put(granularity, "YYYY-MM-DDThh:mm:ssZ");
         defaultProperties.put(autoReset, "true");
         defaultProperties.put(validationUri, "");
