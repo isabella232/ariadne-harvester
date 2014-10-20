@@ -544,8 +544,10 @@ public class OAIHarvester {
 				if (repoProps.getAutoReset() || !from.equals(until)) {
 					harvestlogger.info("Start harvesting from " + reposName);
 					initValidation(repoProps, sessionProps);
+harvestlogger.info("Numero de sets: " + sets.size());
 
 					for (String set : sets) {
+						
 						harvestlogger.info("Start harvesting from " + reposName);
 						sessionProps.setSet(set);
 						int endStatus = OAIHarvester.harvestSet( repoProps, sessionProps);
