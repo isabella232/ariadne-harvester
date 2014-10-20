@@ -348,7 +348,7 @@ public class OAIHarvester {
             if (resumptionRecords != null) {
                 records = resumptionRecords;
             } else {
-                harvestlogger.debug("Harvesting from..." + sessionProps.getSet());
+                harvestlogger.info("Harvesting from (harvest SET)..." + sessionProps.getSet());
                 OAIRepository repository = new OAIRepository();
                 repository.setBaseURL(repoProperties.getBaseURL());
                 repository.setMaxRetryMinutes(Integer.parseInt(PropertiesManager.getInstance().getProperty(
@@ -360,9 +360,11 @@ public class OAIHarvester {
                 if (repoProperties.getAutoReset())
                     from = repository.getEarliestDatestamp();
                 if (repoProperties.getHarvestByGetRecord()) {
+                    harvestlogger.info("Getting records from LAST RECORD" + sessionProps.getSet());
                     records = repository.listIdentifiers(sessionProps.getUntil(), from, sessionProps.getSet(),
                             repoProperties.getMetadataPrefix());
                 } else {
+                    harvestlogger.info("Getting records from DATES" + sessionProps.getSet());
                     records = repository.listRecords(repoProperties.getMetadataPrefix(), sessionProps.getUntil(), from,
                             sessionProps.getSet());
                 }
