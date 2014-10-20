@@ -351,6 +351,7 @@ public class OAIHarvester {
                 harvestlogger.info("Harvesting from (harvest SET)..." + sessionProps.getSet());
                 OAIRepository repository = new OAIRepository();
                 repository.setBaseURL(repoProperties.getBaseURL());
+                harvestlogger.info("Harvesting from Base URL..." + repoProperties.getBaseURL());
                 repository.setMaxRetryMinutes(Integer.parseInt(PropertiesManager.getInstance().getProperty(
                         "Harvest.maxRetryMinutes")));
                 repository.setRetryLimit(Integer.parseInt(PropertiesManager.getInstance().getProperty(
@@ -363,6 +364,7 @@ public class OAIHarvester {
                     harvestlogger.info("Getting records from LAST RECORD " + sessionProps.getSet());
                     harvestlogger.info("Getting records FROM " + from);
                     harvestlogger.info("Getting records UNTIL " + sessionProps.getUntil());
+                    harvestlogger.info("Getting records METADATA PREFIX " + repoProperties.getMetadataPrefix());
                     records = repository.listIdentifiers(sessionProps.getUntil(), from, sessionProps.getSet(),
                             repoProperties.getMetadataPrefix());
                 } else {
