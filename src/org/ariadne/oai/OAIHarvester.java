@@ -360,9 +360,9 @@ public class OAIHarvester {
                 if (repoProperties.getAutoReset())
                     from = repository.getEarliestDatestamp();
                 if (repoProperties.getHarvestByGetRecord()) {
-                    harvestlogger.info("Getting records from LAST RECORD" + sessionProps.getSet());
-                    harvestlogger.info("Getting records FROM" + from);
-                    harvestlogger.info("Getting records UNTIL" + sessionProps.getUntil());
+                    harvestlogger.info("Getting records from LAST RECORD " + sessionProps.getSet());
+                    harvestlogger.info("Getting records FROM " + from);
+                    harvestlogger.info("Getting records UNTIL " + sessionProps.getUntil());
                     records = repository.listIdentifiers(sessionProps.getUntil(), from, sessionProps.getSet(),
                             repoProperties.getMetadataPrefix());
                 } else {
@@ -373,6 +373,7 @@ public class OAIHarvester {
                 harvestlogger.debug("Done");
             }
             int length = records.getCompleteSize();
+            harvestlogger.info("Records to parse: " + length);
             if (length > 0 & resumptionRecords == null)
                 harvestlogger.info("Total number of records to parse : " + length);
             return parse(records, repoProperties, sessionProps);
