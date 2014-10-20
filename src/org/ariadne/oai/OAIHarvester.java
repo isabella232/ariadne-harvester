@@ -546,6 +546,7 @@ public class OAIHarvester {
 					initValidation(repoProps, sessionProps);
 
 					for (String set : sets) {
+						harvestlogger.info("Start harvesting from " + reposName);
 						sessionProps.setSet(set);
 						int endStatus = OAIHarvester.harvestSet( repoProps, sessionProps);
 						finishStatus = Math.max(finishStatus, endStatus);
