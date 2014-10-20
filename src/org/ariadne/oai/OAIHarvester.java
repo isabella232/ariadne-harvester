@@ -361,6 +361,8 @@ public class OAIHarvester {
                     from = repository.getEarliestDatestamp();
                 if (repoProperties.getHarvestByGetRecord()) {
                     harvestlogger.info("Getting records from LAST RECORD" + sessionProps.getSet());
+                    harvestlogger.info("Getting records FROM" + from);
+                    harvestlogger.info("Getting records UNTIL" + sessionProps.getUntil());
                     records = repository.listIdentifiers(sessionProps.getUntil(), from, sessionProps.getSet(),
                             repoProperties.getMetadataPrefix());
                 } else {
