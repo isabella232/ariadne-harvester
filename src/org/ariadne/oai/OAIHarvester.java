@@ -374,6 +374,7 @@ public class OAIHarvester {
             return parse(records, repoProperties, sessionProps);
         } else {
             String msg = "-- HARVESTING INTERRUPTED --";
+            harvestlogger.info("msg + JOB: " + sessionProps.getJob() + "FLAG: " + sessionProps.getJob());
             short i = 15;
             throw new OAIException(i, msg);
         }
